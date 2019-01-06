@@ -20,3 +20,10 @@ class CommunityTest(TestCase):
             self.community._meta.verbose_name_plural,
             'communities'
         )
+
+    def test_community_should_implement_str_for_friendly_name(self):
+        expected = 'ชุมชนบ้านเชื้อเพลิง (Chueaploeng Community)'
+        self.community.name = expected
+        self.community.save()
+
+        self.assertEqual(self.community.__str__(), expected)
