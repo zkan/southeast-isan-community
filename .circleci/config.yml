@@ -23,6 +23,7 @@ jobs:
       - run:
           name: Run Static Analysis
           command: |
+            cd southeast_isan_community
             pipenv run flake8
       - run:
           name: Run Tests
