@@ -5,12 +5,13 @@ from ..models import Community
 
 class CommunityTest(TestCase):
     def setUp(self):
+        self.community_name = 'ชุมชนบ้านเชื้อเพลิง (Chueaploeng Community)'
         self.community = Community.objects.create(
-            name='ชุมชนบ้านเชื้อเพลิง (Chueaploeng Community)'
+            name=self.community_name
         )
 
-    def test_save_community(self):
-        expected = 'ชุมชนบ้านเชื้อเพลิง (Chueaploeng Community)'
+    def test_community_should_be_persisted_correctly(self):
+        expected = self.community_name
         community = Community.objects.last()
         self.assertEqual(community.name, expected)
 
@@ -21,5 +22,5 @@ class CommunityTest(TestCase):
         )
 
     def test_community_should_implement_str_for_friendly_name(self):
-        expected = 'ชุมชนบ้านเชื้อเพลิง (Chueaploeng Community)'
+        expected = self.community_name
         self.assertEqual(self.community.__str__(), expected)
