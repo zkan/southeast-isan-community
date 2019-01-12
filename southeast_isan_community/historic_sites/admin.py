@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from .models import HistoricalSite
+from .models import HistoricSite
 
 
-@admin.register(HistoricalSite)
-class HistoricalSiteAdmin(admin.ModelAdmin):
+@admin.register(HistoricSite)
+class HistoricSiteAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'community',

@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'communities',
     'community_persons',
-    'historical_sites',
+    'historic_sites',
     'natural_places',
 ]
 

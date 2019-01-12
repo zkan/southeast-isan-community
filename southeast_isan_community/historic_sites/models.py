@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class HistoricalSite(models.Model):
+class HistoricSite(models.Model):
     name = models.CharField(null=False, blank=False, max_length=150)
     community = models.ForeignKey(
         'communities.Community',
