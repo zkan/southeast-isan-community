@@ -23,7 +23,7 @@ class CommunityPersonTest(TestCase):
         self.assertEqual(community_person.role, self.community_person_role)
         self.assertEqual(community_person.community.id, self.community.id)
 
-    def test_community_should_implement_str_for_friendly_name(self):
+    def test_community_person_should_implement_str_for_friendly_name(self):
         expected = f'{self.community_person_name} ' \
             f'({self.community_person_role})'
         self.assertEqual(self.community_person.__str__(), expected)

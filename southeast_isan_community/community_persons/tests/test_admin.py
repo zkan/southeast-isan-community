@@ -6,7 +6,7 @@ from ..models import CommunityPerson
 
 
 class CommunityPersonAdminTest(TestCase):
-    def test_community_admin_should_be_registered(self):
+    def test_community_person_admin_should_be_registered(self):
         self.assertIsInstance(
             admin.site._registry[CommunityPerson],
             CommunityPersonAdmin

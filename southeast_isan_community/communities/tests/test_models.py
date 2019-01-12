@@ -11,9 +11,8 @@ class CommunityTest(TestCase):
         )
 
     def test_community_should_be_persisted_correctly(self):
-        expected = self.community_name
         community = Community.objects.last()
-        self.assertEqual(community.name, expected)
+        self.assertEqual(community.name, self.community_name)
 
     def test_community_should_show_correct_plural_name(self):
         self.assertEqual(
@@ -22,5 +21,4 @@ class CommunityTest(TestCase):
         )
 
     def test_community_should_implement_str_for_friendly_name(self):
-        expected = self.community_name
-        self.assertEqual(self.community.__str__(), expected)
+        self.assertEqual(self.community.__str__(), self.community_name)

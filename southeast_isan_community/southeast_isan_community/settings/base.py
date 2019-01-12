@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'communities',
     'community_persons',
+    'natural_places',
 ]
 
 MIDDLEWARE = [
