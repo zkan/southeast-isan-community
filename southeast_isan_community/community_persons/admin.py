@@ -7,9 +7,11 @@ from .models import CommunityPerson
 class CommunityPersonAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'role',
         'community',
     )
     list_filter = (
+        'role',
         'community',
     )
     search_fields = (

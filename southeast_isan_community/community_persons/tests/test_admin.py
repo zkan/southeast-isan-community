@@ -15,12 +15,14 @@ class CommunityPersonAdminTest(TestCase):
     def test_community_person_admin_should_set_list_display(self):
         expected = (
             'name',
+            'role',
             'community',
         )
         self.assertEqual(CommunityPersonAdmin.list_display, expected)
 
     def test_community_person_admin_should_set_list_filter(self):
         expected = (
+            'role',
             'community',
         )
         self.assertEqual(CommunityPersonAdmin.list_filter, expected)
